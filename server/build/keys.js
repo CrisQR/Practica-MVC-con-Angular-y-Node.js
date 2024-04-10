@@ -4,7 +4,7 @@ exports.default = {
     database: {
         host: 'localhost',
         user: 'root',
-        password: 'administrador',
+        password: 'Dafesor3_',
         database: 'bdproductos'
     }
 };
