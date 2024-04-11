@@ -17,7 +17,7 @@ export class ProductsService {
   }
 
   getProduct(id: number) {
-    return this.http.get(`{$this.API_URI}/products/${id}`)
+    return this.http.get(`${this.API_URI}/products/${id}`)
   }
   
   createProduct(product: Product) {

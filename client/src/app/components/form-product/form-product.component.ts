@@ -56,7 +56,7 @@ export class FormProductComponent implements OnInit{
     .subscribe(
       res => {
         console.log(res);
-        this.router.navigate(['/products']);
+        this.router.navigate(['']);
       },
       err => console.log(err)
     );
@@ -79,7 +79,7 @@ export class FormProductComponent implements OnInit{
     .subscribe(
       res => {
         console.log(res); 
-        this.router.navigate(['/products']);
+        this.router.navigate(['']);
       },
       err => console.error(err)
     )
