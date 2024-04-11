@@ -27,4 +27,20 @@ export class ProductsComponent implements OnInit {
       err => console.log(err)
     )
   }
+
+  deleteProduct(id: number){
+    if (window.confirm('¿Estás seguro que deseas eliminar el producto?')){
+      this.productsService.deleteProduct(id).subscribe(
+        res => {
+          console.log(res);
+          this.getProducts();
+        },
+        err => console.log(err)
+      )
+    }
+  }
+
+  editComic(id: string){
+    console.log(id);
+  }
 }

@@ -1,0 +1,28 @@
+<form class="formulario1">
+  <fieldset>
+    <h2>Formulario de Productos</h2>
+
+    <div>
+      <label class="form-label mt-4">Código</label>
+      <input type="text" class="form-control" id="CodigoProducto" name="CodigoProducto" [(ngModel)]="product.codigo"
+        placeholder="Ingrese el código del producto">
+    </div>
+
+    <div>
+      <label class="form-label mt-4">Nombre</label>
+      <input type="text" class="form-control" name="NombreProducto" [(ngModel)]="product.nombre"
+        placeholder="Ingrese el nombre del producto">
+    </div>
+
+    <div>
+      <label class="form-label mt-4">Precio</label>
+      <input type="text" class="form-control" name="PrecioProducto" [(ngModel)]="product.precio"
+        placeholder="Ingrese el precio del producto">
+    </div>
+
+    <div class="mt-5">
+      <app-button-save routerLink="" (click)="edit ? updateProduct() : saveNewProduct()"></app-button-save>
+    </div>
+
+  </fieldset>
+</form>

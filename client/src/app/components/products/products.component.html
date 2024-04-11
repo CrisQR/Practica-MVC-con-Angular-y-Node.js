@@ -1,11 +1,12 @@
-<div class="container py-4">
-  <h2>Tabla de Productos</h2>
-  <table class="table table-hover">
+<div class="table-responsive mt-4">
+  <h2 class="mb-5 text-center">Tabla de Productos</h2>
+  <table class="table align-middle text-center table-hover">
     <thead>
       <tr>
         <th scope="col">Código</th>
         <th scope="col">Nombre</th>
         <th scope="col">Precio</th>
+        <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +20,18 @@
         <td>
           {{product.precio}}
         </td>
+        <td>
+          <!-- botones -->
+          <app-button-edit [routerLink]="['/products/edit', product.codigo]"></app-button-edit>
+
+          <app-button-delete (click)="deleteProduct(product.codigo)"></app-button-delete>
+        </td>
       </tr>
     </tbody>
   </table>
+
+  <div class="mt-5">
+    <app-button-add routerLink="/products/add"></app-button-add>
+  </div>
+
 </div>
